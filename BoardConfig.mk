@@ -45,7 +45,7 @@ OPT_MEMORY := true
 
 STRICT_ALIASING := true
 GRAPHITE_OPTS := true
-TARGET_USE_PIPE := true
+TARGET_USE_PIPE := false
 
 DEVICE_USE_SYNAPSE := true
 
