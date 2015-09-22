@@ -44,12 +44,11 @@ public class comancheRIL extends RIL implements CommandsInterface {
 
     public comancheRIL(Context context, int preferredNetworkType,
             int cdmaSubscription, Integer instanceId) {
-        this(context, preferredNetworkType, cdmaSubscription);
+        super(context, preferredNetworkType, cdmaSubscription, instanceId);
     }
     public comancheRIL(Context context, int networkMode,
             int cdmaSubscription) {
         super(context, networkMode, cdmaSubscription);
-
     }
 
     @Override
@@ -131,7 +130,7 @@ public class comancheRIL extends RIL implements CommandsInterface {
             response[7] &= 0xff;
         }
 
-        return new SignalStrength(response[0], response[1], response[2], response[3], response[4], response[5], response[6], response[7], response[8], response[9], response[10], response[11], (p.readInt() != 0));
+        return new SignalStrength(response[0], response[1], response[2], response[3], response[4], response[5], response[6], response[7], response[8], response[9], response[10], response[11], true);
 
     }
 
@@ -248,7 +247,7 @@ public class comancheRIL extends RIL implements CommandsInterface {
 
         // has bonus long containing milliseconds since boot that the NITZ
         // time was received
-        long nitzReceiveTime = p.readLong();
+        int nitzReceiveTime = p.readInt();
 
         Object[] result = new Object[2];
 
@@ -260,7 +259,7 @@ public class comancheRIL extends RIL implements CommandsInterface {
         }
 
         result[0] = fixedNitz;
-        result[1] = Long.valueOf(nitzReceiveTime);
+        result[1] = Integer.valueOf(nitzReceiveTime);
 
         boolean ignoreNitz = SystemProperties.getBoolean(
                         TelephonyProperties.PROPERTY_IGNORE_NITZ, false);
