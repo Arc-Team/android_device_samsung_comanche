@@ -8,11 +8,6 @@
     "remote":      "B14CKB1RD",
     "repository":  "B14CKB1RD_Kernel_d2",
     "target_path": "kernel/samsung/blackbird",
-    "revision":    "Lollipop" 
-  },
-  {
-    "repository":  "proprietary_vendor_samsung",
-    "target_path": "vendor/samsung",
-    "revision":    "cm-12.1"
+    "revision":    "Lollipop"
   }
 ]
