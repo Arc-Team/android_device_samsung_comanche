@@ -42,13 +42,12 @@ public class comancheRIL extends RIL implements CommandsInterface {
 
     private Message mPendingGetSimStatus;
 
-    public comancheRIL(Context context, int preferredNetworkType,
+        public comancheRIL(Context context, int networkModes, int cdmaSubscription) {
+        this(context, networkModes, cdmaSubscription, null);
+    }
+        public comancheRIL(Context context, int preferredNetworkType,
             int cdmaSubscription, Integer instanceId) {
         super(context, preferredNetworkType, cdmaSubscription, instanceId);
-    }
-    public comancheRIL(Context context, int networkMode,
-            int cdmaSubscription) {
-        super(context, networkMode, cdmaSubscription, null);
     }
 
     @Override
