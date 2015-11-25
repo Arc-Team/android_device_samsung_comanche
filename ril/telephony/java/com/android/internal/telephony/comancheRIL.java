@@ -48,7 +48,7 @@ public class comancheRIL extends RIL implements CommandsInterface {
     }
     public comancheRIL(Context context, int networkMode,
             int cdmaSubscription) {
-        super(context, networkMode, cdmaSubscription);
+        super(context, networkMode, cdmaSubscription, null);
     }
 
     @Override
