@@ -54,8 +54,8 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
 
 # Audio configuration
 PRODUCT_COPY_FILES += \
-    device/samsung/d2-common/audio/snd_soc_msm_2x:system/etc/snd_soc_msm/snd_soc_msm_2x \
-    device/samsung/d2-common/audio/audio_policy.conf:system/etc/audio_policy.conf
+    device/samsung/comanche/audio/audio_policy.conf:system/etc/audio_policy.conf \
+    device/samsung/comanche/audio/snd_soc_msm_2x:system/etc/snd_soc_msm/snd_soc_msm_2x
 
 # Keylayout
 PRODUCT_COPY_FILES += \
