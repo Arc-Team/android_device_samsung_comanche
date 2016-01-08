@@ -93,5 +93,3 @@ PRODUCT_PACKAGES += \
     
 # msm8960 common
 $(call inherit-product, device/samsung/msm8960-common/msm8960.mk)
-
-$(call inherit-product, device/samsung/comanche/rootdir/synapse.mk)
