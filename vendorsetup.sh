@@ -1,1 +1,2 @@
 add_lunch_combo cm_comanche-userdebug
+add_lunch_combo pac_comanche-userdebug
