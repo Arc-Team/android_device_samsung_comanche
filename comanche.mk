@@ -23,15 +23,7 @@
  
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
+
 # Inherit from comanche device
 $(call inherit-product, device/samsung/comanche/device.mk)
-
-# Set those variables here to overwrite the inherited values.
-PRODUCT_NAME := full_comanche
-PRODUCT_DEVICE := comanche
-PRODUCT_BRAND := samsung
-PRODUCT_MANUFACTURER := samsung
-PRODUCT_MODEL := SGH-I547
-
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=comanche TARGET_DEVICE=comanche BUILD_FINGERPRINT="Samsung/COMANCHE/comanche:4.1.2/JZO54K/I847UCCMH5:user/release-keys" PRIVATE_BUILD_DESC="comanche-user 4.1.2 JZO54K I847UCCMH5 release-keys"
-
